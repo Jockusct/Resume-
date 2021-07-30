@@ -1,0 +1,96 @@
+---
+name: Tim Jockusch
+date: "`r format(Sys.time(), '%B, %Y')`"
+qualifications: MS Data Science and Analytics, BS Statistics
+position: Data Science and Analytics student
+address: Grand Rapids, Michigan
+#profilepic: "files/Profpic.jpg"
+phone: 616 617 5032
+email: Tim.Jockusch@gmail.com
+github: Jockusct
+headcolor: "990000"
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+tinytex:::install_prebuilt()
+library(tidyverse)
+library(vitae)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Education
+
+```{r education}
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
+  "Master of Science in Data Science and Analytics", "Grand Valley State University", "Grand Rapids, Michigan", "Expected Graduation: December 2022", "Utilizing R, SQL, SAS, and Python to solve real world data problems.",
+  "Bachelor of Science in Statistics", "Grand Valley State University", "Grand Rapids, Michigan", "Aug 2016 - Apr 2020", "Math and Stats club",
+    "Bachelor of Science in Statistics", "Grand Valley State University", "Grand Rapids, Michigan", "Aug 2016 - Apr 2020", "Deans List: Fall 2017, Winter 2019, Winter 2020 "
+) %>% 
+  detailed_entries(what=degree, when=dates, with=uni, where=loc, why=details)
+```
+
+# Experience
+
+```{r Experience}
+tribble(
+  ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  "Customer Service Representative", "Enterprise-Rent-A-Car", "Grand Rapids, Michigan", "May 2017- August 2019", "Handled up to 300+ customers a day, with duties including communicating detailed contracts, rental policies, and procedures.",
+  "Customer Service Representative", "Enterprise-Rent-A-Car", "Grand Rapids, Michigan", "May 2017- August 2019", "Used selling techniques to maximize profit for the company.",
+    "Customer Service Representative", "Enterprise-Rent-A-Car", "Grand Rapids, Michigan", "May 2017- August 2019","Helped Enterprise achieve increasing customer service scores each month.",
+  "Student Statistical Consultant","Grand Valley State University", "Allendale, Michigan","January 2019- April 2019","Analyzed the impact of Activity-based learning on students' attitudes towards Mathematics.",
+    "Student Statistical Consultant","Grand Valley State University", "Allendale, Michigan","January 2019- April 2019","Used excel, SAS, SPSS, and Tableau to analyze Likert scale survey data.",
+    "Student Statistical Consultant","Grand Valley State University", "Allendale, Michigan","January 2019- April 2019","Analyzed and compared multiple one-tailed paired sample t-tests and data trends.",
+     "Student Statistical Consultant","Grand Valley State University", "Allendale, Michigan","January 2019- April 2019","Presented results at Student Scholars Day GVSU."
+) %>% 
+  detailed_entries(what=role, when=dates, with=company, where=loc, why=details)
+```
+
+# Skills
+
+```{r skills}
+tribble(
+  ~ area, ~ skill,
+ "Programming Langauges","R, SAS, SQL, Javascript, Python",
+ "Microsoft Office", "Excel, Word, Powerpoint",
+ "Version Control" , "Git",
+ "Data Analysis", "Data Cleaning, Visualisation, Modeling, Machine Learning, Web Scraping ",
+    "Strong analytical and problem-solving skills", "",
+    "Team-Player with excellent communication skills", "",
+    "Strong desire to learn", ""
+) %>% 
+  detailed_entries(with=area,what=skill)
+```
+
+
+# Languages 
+
+```{r language}
+tribble(
+  ~ language, ~ fluent,
+"German", "Fluent"
+) %>% 
+  detailed_entries(with=language,what=fluent)
+```
+
+# Certifications 
+
+```{r certifications}
+tribble(
+  ~ title, ~ source, ~ date,
+"Cleaning Data In R with Tidyverse and Data.table", "Udemy", "Programming",
+  "Data Science and Machine Learning Bootcamp with R", "Udemy", "Programming",
+   "Master SQL for Data Science", "Udemy", "Database Querying",
+  "Data Analysis with Pandas and Python", "Udemy", "Programming",
+  "Python For Data Science and Machine Learning Bootcamp", "Udemy", "Programming",
+  "SAS Programming BASE Certification course", "Udemy", "Programming",
+  "SQL for Data Analysis", "Udemy", "Database Querying",
+  "The Complete SQL Bootcamp 2020" , "Udemy", "Database Querying",
+  "R Programming: Advanced Analytics in R For Data Science", "Udemy", "Programming",
+  "Microsoft Excel - Data Anlaysis With Excel Pivot Tables", "Udemy", "Microsoft Office"
+) %>% 
+  detailed_entries(why=title,with=date,when=source)
